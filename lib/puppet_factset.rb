@@ -15,10 +15,10 @@ module PuppetFactset
     data["values"]
   end
 
-  # List the available factsets
+  # List the available factsets, sorted A-Z
   def self.factsets()
     Dir.glob(File.join(factset_dir, '*.json')).map { |f|
       File.basename(f).gsub('.json','')
-    }
+    }.sort
   end
 end
