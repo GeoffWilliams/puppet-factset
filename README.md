@@ -69,6 +69,8 @@ require 'puppet_factset'
 factsets = PuppetFactset::factsets
 ```
 
+* The `factsets` array will be sorted A-Z
+
 ## Development
 
 * RSpec tests are provided, please ensure these pass before and after adding any ruby code to the project
