@@ -68,9 +68,9 @@ fact_hash = PuppetFactset::factset_hash(system_name)
 * To run tests: `bundle install && bundle exec rake spec`
 
 ## Authors
-* Dylan Ratcliffe/@dylanratcliffe
-* Geoff Williams/@geoffwilliams
-* Jesse Reynolds/@jessereynolds
+* [Dylan Ratcliffe](https://github.com/dylanratcliffe)
+* [Geoff Williams](https://github.com/geoffwilliams)
+* [Jesse Reynolds](https://github.com/jessereynolds)
 
 ## Contributing
 
