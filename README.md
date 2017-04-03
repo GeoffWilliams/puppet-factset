@@ -1,12 +1,30 @@
+[![Build Status](https://travis-ci.org/declarativesystems/puppet_factset.svg?branch=master)](https://travis-ci.org/declarativesystems/puppet_factset)
 # PuppetFactset
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/puppet_factset`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem provides the output of [Facter](https://docs.puppet.com/facter/3.6/) on several representative test systems which makes a complete set of OS specific facts (AKA factsets) available to programs such as [Onceover](https://github.com/dylanratcliffe/onceover) and [PDQTest](https://github.com/declarativesystems/pdqtest).  The aim here is to provide a shared, reusable and small library providing easy access to facter output on as many platforms as possible.
 
-TODO: Delete this and the text above, and describe your gem
+## Adding new platforms
+To create support for additional platforms all we need to do is log onto a real machine that has puppet installed and run:
+
+```shell
+puppet facts > OSNAME-OSVERSION-ARCH.json
+```
+
+Where:
+
+* OSNAME is the Operating System name, eg `Debian`
+* OSVERSION is the Operating System versoin number, eg `7.8`
+* ARCH indicates the CPU architecture, eg `32`, `64`, `powerpc`
+
+`puppet facts` will give raw json output of every fact which puppet knows about.
+
+Once we have our factset all we need to do is copy it into `res/factset/` inside this git repository and commit it to version control.  To share your new platform support with the world, please create a [Pull Request](https://help.github.com/articles/about-pull-requests/).
+
+Factsets are named based on their filename, not the name of the server they came from/
+
 
 ## Installation
-
-Add this line to your application's Gemfile:
+`puppet_factset` is intended to be used as a library and provides no executable.  To use in your own application, add this line to your application's Gemfile:
 
 ```ruby
 gem 'puppet_factset'
@@ -21,16 +39,39 @@ Or install it yourself as:
     $ gem install puppet_factset
 
 ## Usage
+* `puppet_factset` provides a minimal API to obtain fact information, see below
+* Dependencies are deliberately kept small/absent
 
-TODO: Write usage instructions here
+### Factset Directory
+To obtain the real filesystem directory containing the factset files (`res/factset`):
+
+```ruby
+require 'puppet_factset'
+factset_dir =  PuppetFactset::factset_dir
+```
+
+### Hash of facts
+To obtain a representitive hash of facts for a given system:
+
+```ruby
+require 'puppet_factset'
+fact_hash = PuppetFactset::factset_hash(system_name)
+```
+
+* `system_name` needs to correspond to a file in the factset dir, eg use 'Debian-7.8-64' to access the `'Debian-7.8-64.json'` file.
+* If required system is absent a `RuntimeError` will be raised
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+* RSpec tests are provided, please ensure these pass before and after adding any ruby code to the project
+* If adding new functionality, please write an acommpanying testcase
+* To run tests: `bundle install && bundle exec rake spec`
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+## Authors
+* Dylan Ratcliffe/@dylanratcliffe
+* Geoff Williams/@geoffwilliams
+* Jesse Reynolds/@jessereynolds
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/puppet_factset.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/declarativesystems/puppet_factset.

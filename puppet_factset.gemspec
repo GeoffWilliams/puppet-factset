@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["geoff@geoffwilliams.me.uk"]
 
   spec.summary       = %q{Sample factsets for puppet testing. A factset is a representative sample of the set of facts for a particular OS}
-  spec.homepage      = "https://github.com/GeoffWilliams/puppet_factset"
+  spec.homepage      = "https://github.com/declarativesystems/puppet_factset"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
