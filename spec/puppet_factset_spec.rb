@@ -21,7 +21,7 @@ RSpec.describe PuppetFactset do
   end
 
   it "raises when factset missing" do
-    expect{PuppetFactset::factset_hash('nothere')}.to raise_error
+    expect{PuppetFactset::factset_hash('nothere')}.to raise_error Errno::ENOENT
   end
 
   it "factsets returns the correct list of avaiable factset names" do
