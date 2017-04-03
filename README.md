@@ -13,7 +13,7 @@ puppet facts > OSNAME-OSVERSION-ARCH.json
 Where:
 
 * OSNAME is the Operating System name, eg `Debian`
-* OSVERSION is the Operating System versoin number, eg `7.8`
+* OSVERSION is the Operating System version number, eg `7.8`
 * ARCH indicates the CPU architecture, eg `32`, `64`, `powerpc`
 
 `puppet facts` will give raw json output of every fact which puppet knows about.
