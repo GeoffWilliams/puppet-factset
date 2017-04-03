@@ -61,6 +61,14 @@ fact_hash = PuppetFactset::factset_hash(system_name)
 * `system_name` needs to correspond to a file in the factset dir, eg use 'Debian-7.8-64' to access the `'Debian-7.8-64.json'` file.
 * If required system is absent a `RuntimeError` will be raised
 
+### Available Factsets
+To obtain the list of available factsets suitable for use with `factset_hash`:
+
+```ruby
+require 'puppet_factset'
+factsets = PuppetFactset::factsets
+```
+
 ## Development
 
 * RSpec tests are provided, please ensure these pass before and after adding any ruby code to the project

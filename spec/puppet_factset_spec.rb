@@ -24,4 +24,17 @@ RSpec.describe PuppetFactset do
     expect{PuppetFactset::factset_hash('nothere')}.to raise_error
   end
 
+  it "factsets returns the correct list of avaiable factset names" do
+    factsets = PuppetFactset::factsets
+    expect(factsets.class).to eq Array
+    expect(factsets.size).to eq `ls res/factset/*.json |wc -l`.strip.to_i
+    factsets.each do |f|
+      # test filename removed
+      expect(f).not_to match /\.json/
+
+      # test path removed
+      expect(f).not_to match /\//
+    end
+  end
+
 end

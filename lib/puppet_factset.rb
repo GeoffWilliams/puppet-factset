@@ -14,4 +14,11 @@ module PuppetFactset
     # The facts are tucked away inside the 'values' element so just return that
     data["values"]
   end
+
+  # List the available factsets
+  def self.factsets()
+    Dir.glob(File.join(factset_dir, '*.json')).map { |f|
+      File.basename(f).gsub('.json','')
+    }
+  end
 end
