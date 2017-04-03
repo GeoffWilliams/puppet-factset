@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = PuppetFactset::VERSION
   spec.authors       = ["Geoff Williams", "Dylan Ratcliffe", "Jesse Reynolds"]
   spec.email         = ["geoff@geoffwilliams.me.uk"]
+  spec.licenses    = 'Apache-2.0'
 
   spec.summary       = %q{Sample factsets for puppet testing. A factset is a representative sample of the set of facts for a particular OS}
   spec.homepage      = "https://github.com/declarativesystems/puppet_factset"
