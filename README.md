@@ -71,6 +71,30 @@ factsets = PuppetFactset::factsets
 
 * The `factsets` array will be sorted A-Z
 
+## Merging additional facts/handling external facts
+Sometimes you need to ensure that a fact is present without worrying to much about its real-world value, for example external facts or custom in-module facts that do things such as query for the system for package versions, etc.
+
+`puppet_factset` will automatically merge the hiera data found in all `.json` files found inside the `spec/merge_facts` directory, relative to the current working directory into factset data for each OS when accessed via the above API (the factset files themselves are unchanged).
+
+#### Worked example
+
+```json
+spec/merge_facts/extra_fact.json
+{
+  "extra_fact": "hello"
+}
+```
+
+
+```ruby
+require 'puppet_factset'
+fact_hash = PuppetFactset::factset_hash(system_name)
+puts fact_hash["extra_fact"]  # from your json file
+puts fact_hash["osfamily"]    # from the facts shipped inside this gem
+```
+
+Note that its possible to silently override shipped factsets using this method as well.  I regard this as a feature.
+
 ## Development
 
 * RSpec tests are provided, please ensure these pass before and after adding any ruby code to the project

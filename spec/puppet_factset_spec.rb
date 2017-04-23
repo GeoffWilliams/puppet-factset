@@ -37,4 +37,35 @@ RSpec.describe PuppetFactset do
     end
   end
 
+  it "inserts all facts in the spec/merge_facts/*.json directory if present" do
+    Dir.chdir(MERGED_DIR) {
+      factset_hash = PuppetFactset::factset_hash('AIX-6.1-powerpc')
+      expect(factset_hash.class).to eq Hash
+
+      # prove regular facts loaded
+      expect(factset_hash["os"]["family"]).to eq 'AIX'
+
+      # prove possible to override facts
+      expect(factset_hash["osfamily"]).to eq OVERRIDE_FACT_VALUE
+
+      # prove extra facts loaded
+      expect(factset_hash.has_key?(EXTRA_FACT_KEY)).to be true
+      expect(factset_hash[EXTRA_FACT_KEY]).to eq EXTRA_FACT_VALUE
+    }
+  end
+
+  it "works when spec/merge_facts/*.json directory not present" do
+    Dir.chdir(UNMERGED_DIR) {
+      factset_hash = PuppetFactset::factset_hash('AIX-6.1-powerpc')
+      expect(factset_hash.class).to eq Hash
+
+      # prove regular facts loaded
+      expect(factset_hash["os"]["family"]).to eq 'AIX'
+
+      # prove extra facts not loaded
+      expect(factset_hash.has_key?(EXTRA_FACT_KEY)).to be false
+    }
+  end
+
+
 end
