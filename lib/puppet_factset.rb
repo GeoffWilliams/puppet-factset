@@ -34,9 +34,7 @@ module PuppetFactset
   # @param factset Hash of facts (will be modified in-place)
   def self.merge_facts(factset)
     Dir["#{MERGE_FACTS_DIR}/*.json"].each { |json_file|
-      puts json_file
       facts = JSON.parse(File.read(json_file))
-      puts facts
       factset.merge!(facts)
     }
   end
