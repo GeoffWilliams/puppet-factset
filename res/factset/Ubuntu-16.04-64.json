@@ -1,0 +1,490 @@
+{
+  "name": "vagrant.vm",
+  "values": {
+    "aio_agent_version": "1.9.3",
+    "architecture": "amd64",
+    "augeas": {
+      "version": "1.4.0"
+    },
+    "augeasversion": "1.4.0",
+    "bios_release_date": "07/02/2015",
+    "bios_vendor": "Phoenix Technologies LTD",
+    "bios_version": "6.00",
+    "blockdevice_fd0_size": 4096,
+    "blockdevice_sda_model": "VMware Virtual S",
+    "blockdevice_sda_size": 42949672960,
+    "blockdevice_sda_vendor": "VMware,",
+    "blockdevice_sr0_model": "VMware IDE CDR10",
+    "blockdevice_sr0_size": 1073741312,
+    "blockdevice_sr0_vendor": "NECVMWar",
+    "blockdevices": "fd0,sda,sr0",
+    "boardmanufacturer": "Intel Corporation",
+    "boardproductname": "440BX Desktop Reference Platform",
+    "boardserialnumber": "None",
+    "chassisassettag": "No Asset Tag",
+    "chassistype": "Other",
+    "dhcp_servers": {
+      "ens32": "172.16.172.254",
+      "system": "172.16.172.254"
+    },
+    "disks": {
+      "fd0": {
+        "size": "4.00 KiB",
+        "size_bytes": 4096
+      },
+      "sda": {
+        "model": "VMware Virtual S",
+        "size": "40.00 GiB",
+        "size_bytes": 42949672960,
+        "vendor": "VMware,"
+      },
+      "sr0": {
+        "model": "VMware IDE CDR10",
+        "size": "1.00 GiB",
+        "size_bytes": 1073741312,
+        "vendor": "NECVMWar"
+      }
+    },
+    "dmi": {
+      "bios": {
+        "release_date": "07/02/2015",
+        "vendor": "Phoenix Technologies LTD",
+        "version": "6.00"
+      },
+      "board": {
+        "manufacturer": "Intel Corporation",
+        "product": "440BX Desktop Reference Platform",
+        "serial_number": "None"
+      },
+      "chassis": {
+        "asset_tag": "No Asset Tag",
+        "type": "Other"
+      },
+      "manufacturer": "VMware, Inc.",
+      "product": {
+        "name": "VMware Virtual Platform",
+        "serial_number": "VMware-56 4d 23 81 78 e3 38 2b-b7 d7 53 74 ca 38 7a 90",
+        "uuid": "564D2381-78E3-382B-B7D7-5374CA387A90"
+      }
+    },
+    "domain": "vm",
+    "facterversion": "3.6.2",
+    "filesystems": "btrfs,ext2,ext3,ext4,squashfs,vfat",
+    "fqdn": "vagrant.vm",
+    "gid": "root",
+    "hardwareisa": "x86_64",
+    "hardwaremodel": "x86_64",
+    "hostname": "vagrant",
+    "id": "root",
+    "identity": {
+      "gid": 0,
+      "group": "root",
+      "privileged": true,
+      "uid": 0,
+      "user": "root"
+    },
+    "interfaces": "ens32,lo",
+    "ipaddress": "192.168.74.136",
+    "ipaddress6": "fe80::20c:29ff:fe38:7a90",
+    "ipaddress6_ens32": "fe80::20c:29ff:fe38:7a90",
+    "ipaddress6_lo": "::1",
+    "ipaddress_ens32": "192.168.74.136",
+    "ipaddress_lo": "127.0.0.1",
+    "is_virtual": true,
+    "kernel": "Linux",
+    "kernelmajversion": "4.4",
+    "kernelrelease": "4.4.0-75-generic",
+    "kernelversion": "4.4.0",
+    "load_averages": {
+      "15m": 0.0,
+      "1m": 0.05,
+      "5m": 0.01
+    },
+    "lsbdistcodename": "xenial",
+    "lsbdistdescription": "Ubuntu 16.04.2 LTS",
+    "lsbdistid": "Ubuntu",
+    "lsbdistrelease": "16.04",
+    "lsbmajdistrelease": "16.04",
+    "macaddress": "00:0c:29:38:7a:90",
+    "macaddress_ens32": "00:0c:29:38:7a:90",
+    "manufacturer": "VMware, Inc.",
+    "memory": {
+      "swap": {
+        "available": "1.00 GiB",
+        "available_bytes": 1073737728,
+        "capacity": "0%",
+        "total": "1.00 GiB",
+        "total_bytes": 1073737728,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "system": {
+        "available": "816.48 MiB",
+        "available_bytes": 856145920,
+        "capacity": "17.72%",
+        "total": "992.35 MiB",
+        "total_bytes": 1040551936,
+        "used": "175.86 MiB",
+        "used_bytes": 184406016
+      }
+    },
+    "memoryfree": "816.48 MiB",
+    "memoryfree_mb": 816.484375,
+    "memorysize": "992.35 MiB",
+    "memorysize_mb": 992.34765625,
+    "mountpoints": {
+      "/": {
+        "available": "36.33 GiB",
+        "available_bytes": 39010574336,
+        "capacity": "3.86%",
+        "device": "/dev/mapper/vagrant--vg-root",
+        "filesystem": "ext4",
+        "options": [
+          "rw",
+          "relatime",
+          "errors=remount-ro",
+          "data=ordered"
+        ],
+        "size": "37.79 GiB",
+        "size_bytes": 40576331776,
+        "used": "1.46 GiB",
+        "used_bytes": 1565757440
+      },
+      "/boot": {
+        "available": "414.73 MiB",
+        "available_bytes": 434874368,
+        "capacity": "12.06%",
+        "device": "/dev/sda1",
+        "filesystem": "ext2",
+        "options": [
+          "rw",
+          "relatime",
+          "block_validity",
+          "barrier",
+          "user_xattr",
+          "acl"
+        ],
+        "size": "471.60 MiB",
+        "size_bytes": 494512128,
+        "used": "56.88 MiB",
+        "used_bytes": 59637760
+      },
+      "/dev/shm": {
+        "available": "496.17 MiB",
+        "available_bytes": 520273920,
+        "capacity": "0%",
+        "device": "tmpfs",
+        "filesystem": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "nodev"
+        ],
+        "size": "496.17 MiB",
+        "size_bytes": 520273920,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/run": {
+        "available": "94.74 MiB",
+        "available_bytes": 99340288,
+        "capacity": "4.53%",
+        "device": "tmpfs",
+        "filesystem": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "noexec",
+          "relatime",
+          "size=101620k",
+          "mode=755"
+        ],
+        "size": "99.24 MiB",
+        "size_bytes": 104058880,
+        "used": "4.50 MiB",
+        "used_bytes": 4718592
+      },
+      "/run/lock": {
+        "available": "5.00 MiB",
+        "available_bytes": 5242880,
+        "capacity": "0%",
+        "device": "tmpfs",
+        "filesystem": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "relatime",
+          "size=5120k"
+        ],
+        "size": "5.00 MiB",
+        "size_bytes": 5242880,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/run/user/1000": {
+        "available": "99.24 MiB",
+        "available_bytes": 104058880,
+        "capacity": "0%",
+        "device": "tmpfs",
+        "filesystem": "tmpfs",
+        "options": [
+          "rw",
+          "nosuid",
+          "nodev",
+          "relatime",
+          "size=101620k",
+          "mode=700",
+          "uid=1000",
+          "gid=1000"
+        ],
+        "size": "99.24 MiB",
+        "size_bytes": 104058880,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/sys/fs/cgroup": {
+        "available": "496.17 MiB",
+        "available_bytes": 520273920,
+        "capacity": "0%",
+        "device": "tmpfs",
+        "filesystem": "tmpfs",
+        "options": [
+          "ro",
+          "nosuid",
+          "nodev",
+          "noexec",
+          "mode=755"
+        ],
+        "size": "496.17 MiB",
+        "size_bytes": 520273920,
+        "used": "0 bytes",
+        "used_bytes": 0
+      }
+    },
+    "mtu_ens32": 1500,
+    "mtu_lo": 65536,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "netmask6_ens32": "ffff:ffff:ffff:ffff::",
+    "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+    "netmask_ens32": "255.255.255.0",
+    "netmask_lo": "255.0.0.0",
+    "network": "192.168.74.0",
+    "network6": "fe80::",
+    "network6_ens32": "fe80::",
+    "network6_lo": "::1",
+    "network_ens32": "192.168.74.0",
+    "network_lo": "127.0.0.0",
+    "networking": {
+      "dhcp": "172.16.172.254",
+      "domain": "vm",
+      "fqdn": "vagrant.vm",
+      "hostname": "vagrant",
+      "interfaces": {
+        "ens32": {
+          "bindings": [
+            {
+              "address": "192.168.74.136",
+              "netmask": "255.255.255.0",
+              "network": "192.168.74.0"
+            }
+          ],
+          "bindings6": [
+            {
+              "address": "fe80::20c:29ff:fe38:7a90",
+              "netmask": "ffff:ffff:ffff:ffff::",
+              "network": "fe80::"
+            }
+          ],
+          "dhcp": "172.16.172.254",
+          "ip": "192.168.74.136",
+          "ip6": "fe80::20c:29ff:fe38:7a90",
+          "mac": "00:0c:29:38:7a:90",
+          "mtu": 1500,
+          "netmask": "255.255.255.0",
+          "netmask6": "ffff:ffff:ffff:ffff::",
+          "network": "192.168.74.0",
+          "network6": "fe80::"
+        },
+        "lo": {
+          "bindings": [
+            {
+              "address": "127.0.0.1",
+              "netmask": "255.0.0.0",
+              "network": "127.0.0.0"
+            }
+          ],
+          "bindings6": [
+            {
+              "address": "::1",
+              "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+              "network": "::1"
+            }
+          ],
+          "ip": "127.0.0.1",
+          "ip6": "::1",
+          "mtu": 65536,
+          "netmask": "255.0.0.0",
+          "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+          "network": "127.0.0.0",
+          "network6": "::1"
+        }
+      },
+      "ip": "192.168.74.136",
+      "ip6": "fe80::20c:29ff:fe38:7a90",
+      "mac": "00:0c:29:38:7a:90",
+      "mtu": 1500,
+      "netmask": "255.255.255.0",
+      "netmask6": "ffff:ffff:ffff:ffff::",
+      "network": "192.168.74.0",
+      "network6": "fe80::",
+      "primary": "ens32"
+    },
+    "operatingsystem": "Ubuntu",
+    "operatingsystemmajrelease": "16.04",
+    "operatingsystemrelease": "16.04",
+    "os": {
+      "architecture": "amd64",
+      "distro": {
+        "codename": "xenial",
+        "description": "Ubuntu 16.04.2 LTS",
+        "id": "Ubuntu",
+        "release": {
+          "full": "16.04",
+          "major": "16.04"
+        }
+      },
+      "family": "Debian",
+      "hardware": "x86_64",
+      "name": "Ubuntu",
+      "release": {
+        "full": "16.04",
+        "major": "16.04"
+      },
+      "selinux": {
+        "enabled": false
+      }
+    },
+    "osfamily": "Debian",
+    "partitions": {
+      "/dev/mapper/vagrant--vg-root": {
+        "filesystem": "ext4",
+        "mount": "/",
+        "size": "38.52 GiB",
+        "size_bytes": 41360031744,
+        "uuid": "0726f56a-1f7d-430f-a91c-5de5cd09ccff"
+      },
+      "/dev/mapper/vagrant--vg-swap_1": {
+        "filesystem": "swap",
+        "size": "1.00 GiB",
+        "size_bytes": 1073741824,
+        "uuid": "33ae6634-bc4b-4241-ae2d-6e1da230e127"
+      },
+      "/dev/sda1": {
+        "filesystem": "ext2",
+        "mount": "/boot",
+        "partuuid": "ddd3ec08-01",
+        "size": "487.00 MiB",
+        "size_bytes": 510656512,
+        "uuid": "c28f4329-8b5b-4ade-ab16-f0339f1d5fb5"
+      },
+      "/dev/sda2": {
+        "size": "1.00 KiB",
+        "size_bytes": 1024
+      },
+      "/dev/sda5": {
+        "filesystem": "LVM2_member",
+        "partuuid": "ddd3ec08-05",
+        "size": "39.52 GiB",
+        "size_bytes": 42435870720,
+        "uuid": "fV0zxn-ReOz-071c-MDPe-r1ll-EQN6-43Qo4d"
+      }
+    },
+    "path": "/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "physicalprocessorcount": 1,
+    "processor0": "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz",
+    "processorcount": 1,
+    "processors": {
+      "count": 1,
+      "isa": "x86_64",
+      "models": [
+        "Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz"
+      ],
+      "physicalcount": 1
+    },
+    "productname": "VMware Virtual Platform",
+    "puppetversion": "4.9.4",
+    "ruby": {
+      "platform": "x86_64-linux",
+      "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
+      "version": "2.1.9"
+    },
+    "rubyplatform": "x86_64-linux",
+    "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
+    "rubyversion": "2.1.9",
+    "selinux": false,
+    "serialnumber": "VMware-56 4d 23 81 78 e3 38 2b-b7 d7 53 74 ca 38 7a 90",
+    "ssh": {
+      "dsa": {
+        "fingerprints": {
+          "sha1": "SSHFP 2 1 a8b84087d26b79d61030b55d6b2ec2be0886d799",
+          "sha256": "SSHFP 2 2 99fc13d4fe75fc0f93644c5121168edbb165af8069d4979aedaae5871642701a"
+        },
+        "key": "AAAAB3NzaC1kc3MAAACBAIpdwcjdHMiumhh8UmnzvDU7crXJ4j76+to7euppmFvb3xSggxHolt9fwPkg+vu9MQ3a6nMncTCgjdTVgOZi9t4R8EWeNRQpYsE3r3N5ttl9tRToeM6QjY69VmQNUF89gdzE3QuaEwidg3Wc4qA4hbutmMXKNpY1n4L4RitY7BI5AAAAFQCH7AjJ4xdDIm90g9uNFiPe7Gv+jQAAAIBpphB3CI2uW4UyrgsvMzdsPXzxg/vO+Al1sgN+JFU8sfm/tXy03PYoR106ldMwFYz9A5bHpdyS5myjfhWw9b8KiUpYHu9cK/zbyhL8hBUKfHtYm85ARUJYMT+NvUcb1g0SyqCmDaM3g5hnHp4U/2F4jCyrPqWr/2J8G740rfq3nQAAAIBKjojxFhiKlHRZWYrVscFbmApNTgAVVXOcEm8l3Oy7YymddhcY9veHNMjUQFO3Kt25ag6G185RnSPEIj3Rp1jcbT3PUB7Ob4SWT0oDGfijYyL+YyF6INlbcOpvPMk1hpARZg9XuXOtD0LbNFH4E8TsnxotAlr77xDh3zWqSKf5Gg=="
+      },
+      "ecdsa": {
+        "fingerprints": {
+          "sha1": "SSHFP 3 1 9e834a3f54fd21384cacffc6adccff15aa2ba18b",
+          "sha256": "SSHFP 3 2 8eae246c5110f3caa803fd98fc334e22865900a934bcb1a2e402d099de65422b"
+        },
+        "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAxqOg9tQrCU1/sOoOroX1tK8GkzC3UsVBTLzny/PQ6OYgidT2cgaBGrsyTyfWSMbetUPzanbEG3UfkEp21mMxI="
+      },
+      "ed25519": {
+        "fingerprints": {
+          "sha1": "SSHFP 4 1 f14101a7ae96b52e3f0b78aa2ce5075319b2bf61",
+          "sha256": "SSHFP 4 2 0fad9e78c27721f0279b18cfe5b9cd329ecc14e3ba4fdc75b5030377e8a054a6"
+        },
+        "key": "AAAAC3NzaC1lZDI1NTE5AAAAICHXRn/M6JDOq73UbjBsfrHZOFnYZw4HWymSbdd026+g"
+      },
+      "rsa": {
+        "fingerprints": {
+          "sha1": "SSHFP 1 1 df82e42dd8c8057ff616de0985405eb82ce7b8c6",
+          "sha256": "SSHFP 1 2 97e62df94e8a202f1475e3ae5aad53e28ff658c0577e25928c39785a58fbb4d9"
+        },
+        "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDOUDlhh+2htUjIslFrJnr0R6IqWvRhXDynegMCAkEnbw69jTFtJUII5UphGqBIBWS6D3p9vfXGFQWnrZyQFmlzFuZ/D8gqZXlJh9v+up0EORGOrwM9csXPdJAsMOA72pmrFEIU2pghaOOmohiaDU+1UsfmXz+ajRHwSPXaV1cT58bMyK0WlfK9PMjPisQ1wmB5vNgn3n3FXoR7WWAYw09sxLZINoJ6G2JOKVe2zD/NJXCsR/LyZf3OHLk5lJvb5uXrm1gco4U9F5pv6iqJTD5kNtAk/iQRCishcaEspQ1cCOBjNAnIJTQDYzKWqMaYcmuecdCD9S/Y43cyGCBQ1TLx"
+      }
+    },
+    "sshdsakey": "AAAAB3NzaC1kc3MAAACBAIpdwcjdHMiumhh8UmnzvDU7crXJ4j76+to7euppmFvb3xSggxHolt9fwPkg+vu9MQ3a6nMncTCgjdTVgOZi9t4R8EWeNRQpYsE3r3N5ttl9tRToeM6QjY69VmQNUF89gdzE3QuaEwidg3Wc4qA4hbutmMXKNpY1n4L4RitY7BI5AAAAFQCH7AjJ4xdDIm90g9uNFiPe7Gv+jQAAAIBpphB3CI2uW4UyrgsvMzdsPXzxg/vO+Al1sgN+JFU8sfm/tXy03PYoR106ldMwFYz9A5bHpdyS5myjfhWw9b8KiUpYHu9cK/zbyhL8hBUKfHtYm85ARUJYMT+NvUcb1g0SyqCmDaM3g5hnHp4U/2F4jCyrPqWr/2J8G740rfq3nQAAAIBKjojxFhiKlHRZWYrVscFbmApNTgAVVXOcEm8l3Oy7YymddhcY9veHNMjUQFO3Kt25ag6G185RnSPEIj3Rp1jcbT3PUB7Ob4SWT0oDGfijYyL+YyF6INlbcOpvPMk1hpARZg9XuXOtD0LbNFH4E8TsnxotAlr77xDh3zWqSKf5Gg==",
+    "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAxqOg9tQrCU1/sOoOroX1tK8GkzC3UsVBTLzny/PQ6OYgidT2cgaBGrsyTyfWSMbetUPzanbEG3UfkEp21mMxI=",
+    "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAICHXRn/M6JDOq73UbjBsfrHZOFnYZw4HWymSbdd026+g",
+    "sshfp_dsa": "SSHFP 2 1 a8b84087d26b79d61030b55d6b2ec2be0886d799\nSSHFP 2 2 99fc13d4fe75fc0f93644c5121168edbb165af8069d4979aedaae5871642701a",
+    "sshfp_ecdsa": "SSHFP 3 1 9e834a3f54fd21384cacffc6adccff15aa2ba18b\nSSHFP 3 2 8eae246c5110f3caa803fd98fc334e22865900a934bcb1a2e402d099de65422b",
+    "sshfp_ed25519": "SSHFP 4 1 f14101a7ae96b52e3f0b78aa2ce5075319b2bf61\nSSHFP 4 2 0fad9e78c27721f0279b18cfe5b9cd329ecc14e3ba4fdc75b5030377e8a054a6",
+    "sshfp_rsa": "SSHFP 1 1 df82e42dd8c8057ff616de0985405eb82ce7b8c6\nSSHFP 1 2 97e62df94e8a202f1475e3ae5aad53e28ff658c0577e25928c39785a58fbb4d9",
+    "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDOUDlhh+2htUjIslFrJnr0R6IqWvRhXDynegMCAkEnbw69jTFtJUII5UphGqBIBWS6D3p9vfXGFQWnrZyQFmlzFuZ/D8gqZXlJh9v+up0EORGOrwM9csXPdJAsMOA72pmrFEIU2pghaOOmohiaDU+1UsfmXz+ajRHwSPXaV1cT58bMyK0WlfK9PMjPisQ1wmB5vNgn3n3FXoR7WWAYw09sxLZINoJ6G2JOKVe2zD/NJXCsR/LyZf3OHLk5lJvb5uXrm1gco4U9F5pv6iqJTD5kNtAk/iQRCishcaEspQ1cCOBjNAnIJTQDYzKWqMaYcmuecdCD9S/Y43cyGCBQ1TLx",
+    "swapfree": "1.00 GiB",
+    "swapfree_mb": 1023.99609375,
+    "swapsize": "1.00 GiB",
+    "swapsize_mb": 1023.99609375,
+    "system_uptime": {
+      "days": 0,
+      "hours": 0,
+      "seconds": 339,
+      "uptime": "0:05 hours"
+    },
+    "timezone": "UTC",
+    "uptime": "0:05 hours",
+    "uptime_days": 0,
+    "uptime_hours": 0,
+    "uptime_seconds": 339,
+    "uuid": "564D2381-78E3-382B-B7D7-5374CA387A90",
+    "virtual": "vmware",
+    "clientcert": "vagrant.vm",
+    "clientversion": "4.9.4",
+    "clientnoop": false
+  },
+  "timestamp": "2017-04-29T14:16:53.256494960+00:00",
+  "expiration": "2017-04-29T14:46:53.257459995+00:00"
+}
